@@ -1,8 +1,8 @@
 -- Use this file to define your SQL tables
 -- The SQL in this file will be executed when you run `npm run setup-db`
-DROP TABLE IF EXISTS books_authors;
-DROP TABLE IF EXISTS authors;
-DROP TABLE IF EXISTS books;
+DROP TABLE IF EXISTS books_authors CASCADE;
+DROP TABLE IF EXISTS authors CASCADE; 
+DROP TABLE IF EXISTS books CASCADE;
 
 CREATE TABLE books (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, 
@@ -40,7 +40,8 @@ VALUES
 ('Survivor', 'W. W. Norton', 1999),
 ('The Fifth Season', 'Orbit', 2015),
 ('Vicious', 'Tor Books', 2013),
-('A Darker Shade of Magic', 'Tor Books', 2015);
+('A Darker Shade of Magic', 'Tor Books', 2015)
+;
 
 INSERT INTO authors (
     name, 
@@ -53,7 +54,8 @@ VALUES
 ('Chuck Palanuick', 'February 2, 1962', 'Washington, US'),
 ('Nora Keita Jemisin', 'September 17, 1972', 'Iowa, US'),
 ('Victoria Elizabeth Schwab', 'July 7, 1987', 'California, US'),
-('Terry Pratchett', 'April 28, 1948', 'Buckinhamshire, UK');
+('Terry Pratchett', 'April 28, 1948', 'Buckinhamshire, UK')
+;
 
 INSERT INTO books_authors (
     author_id, 
