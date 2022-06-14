@@ -29,7 +29,25 @@ describe('backend-express-template routes', () => {
         { 'id': 6, 'publisher': 'W. W. Norton', 'released': 1999, 'title': 'Survivor' }
       ]
     };
-    
+
+    expect(res.body).toEqual(expected);
+  });
+
+  it('create author', async () => {
+    const res = await request(app)
+      .post('/authors')
+      .send({
+        name: 'John Doe',
+        dob: 'January 1, 1970',
+        pob: 'New York, US'
+      });
+    const expected = {
+      'id': '7',
+      'dob': 'January 1, 1970',
+      'name': 'John Doe',
+      'pob': 'New York, US',
+      'books': []
+    };
     expect(res.body).toEqual(expected);
   });
 

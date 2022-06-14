@@ -31,6 +31,7 @@ INSERT INTO books (
     publisher, 
     released 
 )
+
 VALUES
 ('Slaughterhouse Five', 'Delacorte', 1969),
 ('American Gods', 'William Morrow', 2001),
@@ -40,8 +41,7 @@ VALUES
 ('Survivor', 'W. W. Norton', 1999),
 ('The Fifth Season', 'Orbit', 2015),
 ('Vicious', 'Tor Books', 2013),
-('A Darker Shade of Magic', 'Tor Books', 2015)
-;
+('A Darker Shade of Magic', 'Tor Books', 2015);
 
 INSERT INTO authors (
     name, 
@@ -54,8 +54,7 @@ VALUES
 ('Chuck Palanuick', 'February 2, 1962', 'Washington, US'),
 ('Nora Keita Jemisin', 'September 17, 1972', 'Iowa, US'),
 ('Victoria Elizabeth Schwab', 'July 7, 1987', 'California, US'),
-('Terry Pratchett', 'April 28, 1948', 'Buckinhamshire, UK')
-;
+('Terry Pratchett', 'April 28, 1948', 'Buckinhamshire, UK');
 
 INSERT INTO books_authors (
     author_id, 
