@@ -48,12 +48,24 @@
           </tr>
           <tr class="border-2">
             <td class="table-cell p-3"><pre>/books</pre></td>
-            <td class="table-cell p-3 text-center">POST</td>
+            <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3">Gets a list of books</td>
             <td class="table-cell p-3">
-              Add a book
+              <a href="/books" target="_blank" class="text-blue-700"
+                >Example</a
+              >
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/books/:id</pre></td>
+            <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3">
+              Returns the detail about the book matching the id in the parameter
             </td>
             <td class="table-cell p-3">
-              curl -d '{"title": "Steve", "publisher": Steve Publishing, "released": 2025, "author_id": 1 }' -H 'Content-Type: application/json' '/books'
+              <a href="/books/1" target="_blank" class="text-blue-700"
+                >Example</a
+              >
             </td>
           </tr>
         </tbody>
