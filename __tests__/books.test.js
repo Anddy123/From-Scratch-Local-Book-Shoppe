@@ -29,20 +29,19 @@ describe('book routes', () => {
     expect(res.body).toEqual(expected);
   });
 
-  it.skip('create author', async () => {
+  it('create book', async () => {
     const res = await request(app)
-      .post('/authors')
+      .post('/books')
       .send({
-        name: 'John Doe',
-        dob: 'January 1, 1970',
-        pob: 'New York, US'
+        title: 'The Great Gatsby',
+        publisher: 'F. Scott Fitzgerald',
+        released: 1925
       });
     const expected = {
-      'id': '7',
-      'dob': 'January 1, 1970',
-      'name': 'John Doe',
-      'pob': 'New York, US',
-      'books': []
+      'id': '10',
+      'publisher': 'F. Scott Fitzgerald',
+      'title': 'The Great Gatsby',
+      'released': 1925
     };
     expect(res.body).toEqual(expected);
   });
