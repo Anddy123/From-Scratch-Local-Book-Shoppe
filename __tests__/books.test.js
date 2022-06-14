@@ -22,9 +22,8 @@ describe('book routes', () => {
     const expected = {
       'id': '8',
       'publisher': 'Tor Books', 
-      'title': 'A Darker Shade of Magic', 
-      'released': 2015, 
-      'authors': []
+      'title': 'Vicious', 
+      'released': 2013
     };
 
     expect(res.body).toEqual(expected);
