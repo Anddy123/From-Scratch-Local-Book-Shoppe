@@ -7,7 +7,7 @@ describe('book routes', () => {
   beforeEach(() => {
     return setup(pool);
   });
-  
+
   it('get all books', async () => {
 
     const res = await request(app).get('/books');
@@ -16,19 +16,15 @@ describe('book routes', () => {
     expect(books).toHaveProperty('title', 'Good Omens');
   });
 
-  it.skip('get author by id', async () => {
-    const res = await request(app).get('/authors/3');
+  it('get book by id', async () => {
+    const res = await request(app).get('/books/8');
 
     const expected = {
-      'id': '3',
-      'dob': 'February 2, 1962', 
-      'name': 'Chuck Palanuick', 
-      'pob': 'Washington, US', 
-      'books': [
-        { 'id': 4, 'publisher': 'W. W. Norton', 'released': 1996, 'title': 'Fight Club' },
-        { 'id': 5, 'publisher': 'Doubleday', 'released': 2001, 'title': 'Choke' },
-        { 'id': 6, 'publisher': 'W. W. Norton', 'released': 1999, 'title': 'Survivor' }
-      ]
+      'id': '8',
+      'publisher': 'Tor Books', 
+      'title': 'A Darker Shade of Magic', 
+      'released': 2015, 
+      'authors': []
     };
 
     expect(res.body).toEqual(expected);
